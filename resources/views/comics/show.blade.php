@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'comic info')
+@section('title', 'Comic Detail')
 
 @section('css')
 <style>
@@ -33,7 +33,7 @@
     </div>
   </div>
   <button class="btn btn-link">
-    <a href="{{ route('comics.index') }}"><- Back</a>
+    <a href="{{ route('comics.index') }}">back to index comics</a>
   </button>
 </div>
 @endsection

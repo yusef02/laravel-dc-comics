@@ -4,6 +4,7 @@
 
 @section('main-content')
 <div class="container py-5">
+  <a href="{{ route('comics.create') }}" class="mb-4 d-inline-block">Create Comic</a>
   <table class="table">
     <thead>
       <tr>
