@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
 
             $table->string('title', 100);
-            $table->text('description');
-            $table->string('thumb');
-            $table->double('price');
+            $table->text('description')->nullable();
+            $table->string('thumb')->nullable();
+            $table->char('price');
             $table->string('series', 100);
             $table->date('sale_date');
-            $table->enum('type', ['comic book', 'graphic novel']);
+            $table->enum('type', ['comic book', 'graphic novel'])->nullable();
 
             $table->timestamps();
         });
