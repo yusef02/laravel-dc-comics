@@ -23,4 +23,3 @@ Route::get(
 // COMIC RESOURCE
 
 Route::resource('comics', ComicController::class);
-Route::resource('comics/{comic}', ComicController::class);
