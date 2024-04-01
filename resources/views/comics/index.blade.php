@@ -28,11 +28,18 @@
         <td>{{ $comic['type'] }}</td>
         <td>
           <a href="{{ route('comics.show', [$comic]) }}">show</a> |
-          <a href="{{ route('comics.edit', [$comic]) }}">edit</a>
+          <a href="{{ route('comics.edit', [$comic]) }}">edit</a> |
+          <form class="d-inline-block" action="{{ route('comics.destroy', [$comic]) }}" method="POST">
+            @csrf
+            @method('delete')
+            <button class="btn btn-link p-0">dump</button>
+          </form>
         </td>
       </tr>
       @empty
-      <tr>No comics found</tr>
+      <tr>
+        <td class="text-center" colspan="100">No comics found</td>
+      </tr>
       @endforelse
     </tbody>
   </table>

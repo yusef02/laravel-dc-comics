@@ -28,7 +28,12 @@
           <p>{{ $comic->description }}</p><br>
           <span><strong>Price: </strong>{{ $comic->price }}</span><br>
           <span><strong>Sale Date: </strong>{{ $comic->sale_date }}</span><br>
-          <a class="d-inline-block mt-4" href="{{ route('comics.edit', [$comic]) }}">edit</a>
+          <a class="d-inline-block mt-4" href="{{ route('comics.edit', [$comic]) }}">edit</a> |
+          <form class="d-inline-block" action="{{ route('comics.destroy', [$comic]) }}" method="POST">
+            @csrf
+            @method('delete')
+            <button class="btn btn-link p-0">dump</button>
+          </form>
         </div>
       </div>
     </div>
