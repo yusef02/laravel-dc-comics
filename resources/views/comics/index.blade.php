@@ -27,7 +27,8 @@
         <td>{{ $comic['sale_date'] }}</td>
         <td>{{ $comic['type'] }}</td>
         <td>
-          <a href="{{ route('comics.show', [$comic]) }}">show</a>
+          <a href="{{ route('comics.show', [$comic]) }}">show</a> |
+          <a href="{{ route('comics.edit', [$comic]) }}">edit</a>
         </td>
       </tr>
       @empty

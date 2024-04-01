@@ -28,6 +28,7 @@
           <p>{{ $comic->description }}</p><br>
           <span><strong>Price: </strong>{{ $comic->price }}</span><br>
           <span><strong>Sale Date: </strong>{{ $comic->sale_date }}</span><br>
+          <a class="d-inline-block mt-4" href="{{ route('comics.edit', [$comic]) }}">edit</a>
         </div>
       </div>
     </div>
